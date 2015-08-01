@@ -1,4 +1,22 @@
 <h1>Company info</h1>
 <p><%=  @company.name %></p>
 
+<% if @company.projects.size > 0 %>
+	<table>
+		<tbody>
+		<tr>
+			<th>Project</th>
+			<th>Company</th>
+		</tr>
+		<% @company.projects.each do |project| %>
+		<tr>
+			<td><%= link_to project, project %></td>
+			<td><%= project.company %></td>
+		</tr>
+		<% end %>
+		</tbody>
+	</table>
+<% else %>
+	<p>No Projects yet</p>
+<% end %>
 <p><%= link_to 'All Companies', companies_path %></p>

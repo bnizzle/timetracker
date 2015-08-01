@@ -5,3 +5,24 @@
 <p>Slug: <%= @projects.slug %></p>
 
 <%= link_to 'All Projects', projects_path %>
+
+<table>
+	<tbody>
+	<tr>
+		<th>View</th>
+		<th>User</th>
+		<th>Project</th>
+		<th>Date Performed</th>
+		<th>Time Spent</th>
+	</tr>
+	<% @projects.works.each do |work| %>
+		<tr>
+			<td><%= link_to 'View', work %></td>
+			<td><%= work.user %></td>
+			<td><%= work.project %></td>
+			<td><%= work.datetimeperformed %></td>
+			<td><%= work.hours %></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>

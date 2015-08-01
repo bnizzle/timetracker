@@ -1,7 +1,23 @@
 <h1>Work page</h1>
 
-<ul>
-	<% @works.each do |work| %>
-		<li><%= link_to work.datetimeperformed, work %></li>
-	<% end %>
-</ul>
+<table>
+	<tbody>
+		<tr>
+			<th>View</th>
+			<th>User</th>
+			<th>Project</th>
+			<th>Date Performed</th>
+			<th>Time Spent</th>
+		</tr>
+		<% @works.each do |work| %>
+		<tr>
+			<td><%= link_to 'View', work %></td>
+			<td><%= work.user %></td>
+			<td><%= work.project %></td>
+			<td><%= work.datetimeperformed %></td>
+			<td><%= work.hours %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+

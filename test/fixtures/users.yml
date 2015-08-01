@@ -7,14 +7,17 @@
 brennanchan:
   fname: Brennan
   lname: Chan
+  email: me@brennanchan.com
   company: bentleyhoke
 
 janedoe:
   fname: Jane
   lname: Doe
+  email: me@janedoe.com
   company: bentleyhoke
 
 ralphmartinez:
   fname: Ralph
   lname: Martinez
+  email: me@martinez.ru
   company: clientinc

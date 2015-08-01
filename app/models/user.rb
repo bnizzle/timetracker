@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
   validates :fname, length: { minimum: 2 }
   validates :lanme, length: { minimum: 5 }
   validates :company_id, presence: true
+
+  def to_s
+    "#{fname} #{lname}"
+  end
 end
